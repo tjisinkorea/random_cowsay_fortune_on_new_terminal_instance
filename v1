@@ -1,0 +1,15 @@
+# I wouldn't put this up, but as a Linux newbie, it took me a lot of digging from different sources to get the whole set up done, 
+so I'm sharing how to do this quickly.
+
+$ sudo apt-get install cowsay
+$ sudo apt install fortune-mod
+$ fortune | cowsay
+
+# Lastly, to make cowsay load on each new terminal instance with a random fortune and random animal, go to 
+.bashrc file and the very bottom type the following
+
+$ fortune | cowsay -f `ls /usr/share/cowsay/cows/ | shuf -n 1`
+
+# exit the terminal and each time you open a new instance you will have your animal telling you a fortune. 
+
+# I wasn't able to get the .bashrc script to run on new terminal instances on Kali although the script worked in the terminal.
